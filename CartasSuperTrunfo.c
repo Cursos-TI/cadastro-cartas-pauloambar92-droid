@@ -1,9 +1,4 @@
 #include <stdio.h>
-
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
-
 int main() {
 
 char estado[3],estado2[3];
@@ -13,7 +8,12 @@ int populacao,populacao2;
 float area_km²,area_km²_2;
 float PIB,PIB2;
 int pontos_turismo,pontos_turismo2;
+float densidade1 ,densidade2;
+float pibc1,pibc2;
 
+
+
+printf("*****CADASTO DE CARTAS DO SUPER TRUNFO*****\n ");
 
 
 printf("Digite o estado:\n");
@@ -43,6 +43,11 @@ printf("pontos turisticos da cidade:\n");
 
 scanf("%d", &pontos_turismo);
 
+densidade1 = (float)(populacao / area_km²);
+pibc1 = (float)(PIB / populacao);
+
+
+
 printf("digite o estado:\n");
 scanf("%s",estado2);
 
@@ -64,7 +69,11 @@ scanf("%f", &PIB2);
 printf("pontos turisticos da cidade:\n");
 scanf("%d", &pontos_turismo2);
 
-printf("carta 1 :\n");
+densidade2 = (float)(populacao2 / area_km²_2);
+pibc2 = (float)(PIB2 / populacao2);
+
+
+printf("**CARTA SUPER TRUNFO 1**:\n\n");
 
 printf("estado: %s\n", estado);
 printf("codigo do estado: %s\n", codigo);
@@ -73,8 +82,10 @@ printf("população da cidade: %d\n", populacao);
 printf("area da cidade em km²: %.2f\n", area_km²);
 printf("PIB da cidade: %.2f\n", PIB);
 printf("pontos turisticos da cidade: %d\n", pontos_turismo);
+printf ("Densidade Populacional hab/km²: %.2f \n", densidade1);
+printf ("PIB por Capita $: %.2f\n\n" , pibc1);
 
-printf("carta 2 :\n");
+printf("**CARTA SUPER TRUNFO 2**:\n\n");
 
 printf("estado: %s\n", estado2);
 printf("codigo do estado: %s\n", codigo2);
@@ -83,13 +94,9 @@ printf("população da cidade: %d\n", populacao2);
 printf("area da cidade em km²: %.2f\n", area_km²_2);
 printf("PIB da cidade: %.2f\n", PIB2);
 printf("pontos turisticos da cidade: %d\n", pontos_turismo2);
+printf ("Densidade Populacional hab/km²: %.2f \n", densidade2);
+printf ("PIB per Capita $: %.2f\n" , pibc2);
 
 
-  // Área para definição das variáveis para armazenar as propriedades das cidades
 
-  // Área para entrada de dados
-
-  // Área para exibição dos dados da cidade
-
-return 0;
-} 
+}
